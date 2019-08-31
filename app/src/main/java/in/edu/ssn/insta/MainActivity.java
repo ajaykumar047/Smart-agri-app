@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
                     }
-                }, 2000);
+                }, 1200);
             }
         });
 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_grey"
+    tools:context=".Events">
+    <TextView
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Upload A New Post"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
+        android:gravity="center_vertical|center_horizontal"
+        />
+    <ListView
+        android:divider="@color/light_grey"
+        android:id="@+id/events_LV"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -26,6 +26,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,12 +36,15 @@ public class home extends AppCompatActivity
     ImageView plants;
     ImageView gps;
     ImageView display;
+    TextView events;
     int flag=0;
 
     Intent Insta_intent;
     Intent shop_intent;
     Intent gps_intent;
     Intent plant_intent;
+    Intent event_intent;
+
     public void change_image(){
         new Handler().postDelayed(new Runnable(){
             @Override
@@ -84,17 +88,22 @@ public class home extends AppCompatActivity
         insta = (ImageView) findViewById(R.id.insta_home_btn);
         plants = (ImageView) findViewById(R.id.plantg_home_btn);
         gps = (ImageView) findViewById(R.id.GPS_home_btn);
-        display=(ImageView)findViewById(R.id.display_img); 
+        display=(ImageView)findViewById(R.id.display_img);
+        events = (TextView)findViewById(R.id.Event_img_btn) ;
 
         shop.setOnClickListener(shop_redirect);
         insta.setOnClickListener(insta_redirect);
         gps.setOnClickListener(gps_redirect);
         plants.setOnClickListener(plant_redirect);
+        events.setOnClickListener(event_redirect);
+
 
         gps_intent = new Intent(getApplicationContext(), map.class);
         Insta_intent = new Intent(getApplicationContext(), MainActivity.class);
         shop_intent = new Intent(getApplicationContext(), shop.class);
         plant_intent = new Intent(getApplicationContext(), Plants.class);
+        event_intent = new Intent(getApplicationContext(), Events.class);
+
         change_image();
 
     }
@@ -218,6 +227,14 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(plant_intent);
+            change_image();
+
+        }
+    };
+    View.OnClickListener event_redirect = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(event_intent);
             change_image();
 
         }

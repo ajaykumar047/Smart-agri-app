@@ -162,6 +162,20 @@
         </LinearLayout>
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/Event_img_btn"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Upcoming Events"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
+        android:gravity="center_vertical|center_horizontal"
+        />
 
 
 </LinearLayout>
