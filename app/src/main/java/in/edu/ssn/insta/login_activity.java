@@ -78,6 +78,8 @@ public class login_activity extends AppCompatActivity {
                 SharedPref.putString(getApplicationContext(), "sp_Username", acct.getDisplayName());
                 SharedPref.putString(getApplicationContext(), "sp_image_url", acct.getPhotoUrl().toString());
                 SharedPref.putString(getApplicationContext(), "sp_email", acct.getEmail());
+
+
                 Log.i(TAG, "onActivityResult: "+SharedPref.getString(getApplicationContext(),"image_url"));
 
 
@@ -90,6 +92,7 @@ public class login_activity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            SharedPref.putBoolean(getApplicationContext(), "sp_loggedin", true);
                             Intent intent = new Intent(getApplicationContext(),home.class);
                             startActivity(intent);
                         } else {

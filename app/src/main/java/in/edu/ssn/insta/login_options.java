@@ -30,8 +30,16 @@ public class login_options extends AppCompatActivity {
         gardeneing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login_options.this,login_activity.class);
-                startActivity(intent);
+                if(SharedPref.getBoolean(getApplicationContext(),"sp_loggedin") == true)
+                {
+                    Intent intent = new Intent(login_options.this,home.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(login_options.this,login_activity.class);
+                    startActivity(intent);
+                }
+
             }
         });
     }
