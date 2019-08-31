@@ -24,29 +24,15 @@ public class shop extends AppCompatActivity {
         setContentView(R.layout.activity_shop);
         shop_listView = (ListView)findViewById(R.id.shop_item_list);
 
-        arr_list.add(new shop_item_details("Magnesium" , "Cow-Manure","epsom+salt+for+plants","cow+manure ",R.drawable.magnesium,R.drawable.cow_manure));
+        arr_list.add(new shop_item_details("Epsom Salt" , "Cow Manure","epsom+salt+for+plants","cow+manure ",R.drawable.magnesium,R.drawable.cow_manure));
+        arr_list.add(new shop_item_details("Seedling Tray" , "Gardening Tools Cutter","Kraft+Seeds+Seedling+Tray+Hole","Truphe+Gardening+Tools+Cutter+Gloves",R.drawable.unique,R.drawable.truphe));
+        arr_list.add(new shop_item_details("Growth Booster" , "Vermicompost","plant+growth_booster","Vermicompost+for+plants",R.drawable.growth_booster,R.drawable.vermicompost));
+        arr_list.add(new shop_item_details("Orange seeds" , "Dragon fruits","Vamsha+Nature+Care+Tangerine+Darjeeling","dragon+fruit+plant+seeds",R.drawable.orange,R.drawable.dragon));
+        arr_list.add(new shop_item_details("Vertical pots" , "Watering can","vertical+plant+pots","plants_watering+cans",R.drawable.verticalpot,R.drawable.watercan));
         arr_adp = new shopadapter(getApplicationContext(), arr_list);
         shop_listView.setAdapter(arr_adp);
 
     }
 
 
-    View.OnClickListener w_redirect=new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Uri uri = Uri.parse("https://www.wikihow.com/wikiHowTo?search=grow+tomato");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-
-        }
-    };
-    View.OnClickListener y_redirect=new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Uri uri = Uri.parse("https://www.youtube.com/results?search_query=grow+tomatoes");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-
-        }
-    };
 }

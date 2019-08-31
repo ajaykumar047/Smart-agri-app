@@ -31,10 +31,8 @@ import java.util.regex.Pattern;
 public class login_activity extends AppCompatActivity {
 
     private static final String TAG = "app_test";
-    EditText user_id;
-    EditText password;
     Button submit_but;
-    Button info;
+
     Intent intent;
 
     FirebaseAuth mAuth;
@@ -49,27 +47,16 @@ public class login_activity extends AppCompatActivity {
             startActivityForResult(signInIntent, RC_SIGN_IN);
         }
     };
-    private View.OnClickListener info_pressed = new View.OnClickListener() {
-        public void onClick(View v) {
-            Toast.makeText(login_activity.this, "Use your SSN mail id", Toast.LENGTH_LONG).show();
-        }
-    };
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activity);
-        user_id = (EditText) findViewById(R.id.user_id_login);
-        password = (EditText) findViewById(R.id.password_login);
         submit_but = (Button) findViewById(R.id.submit_login);
-        info = (Button) findViewById(R.id.info_login);
 
         submit_but.setOnClickListener(submit_pressed);
         intent = new Intent(login_activity.this, home.class);
-        user_id.setPaintFlags(0);
-        password.setPaintFlags(0);
-        info.setOnClickListener(info_pressed);
         initGoogleSignIn();
 
     }
@@ -89,8 +76,8 @@ public class login_activity extends AppCompatActivity {
             try {
                 final GoogleSignInAccount acct = task.getResult(ApiException.class);
                 SharedPref.putString(getApplicationContext(), "sp_Username", acct.getDisplayName());
-                SharedPref.putString(getApplicationContext(), "image_url", acct.getPhotoUrl().toString());
-                SharedPref.putString(getApplicationContext(), "email", acct.getEmail());
+                SharedPref.putString(getApplicationContext(), "sp_image_url", acct.getPhotoUrl().toString());
+                SharedPref.putString(getApplicationContext(), "sp_email", acct.getEmail());
                 Log.i(TAG, "onActivityResult: "+SharedPref.getString(getApplicationContext(),"image_url"));
 
 

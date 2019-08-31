@@ -43,7 +43,6 @@ public class upload extends AppCompatActivity {
 
     Button uploadbtn;
     Button uploadimg_btn;
-    EditText username;
     EditText desc;
     ImageView img_preview;
 
@@ -64,7 +63,6 @@ public class upload extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
         uploadbtn = (Button) findViewById(R.id.upload_btn_up);
         uploadimg_btn = (Button) findViewById(R.id.upload_img_btn);
-        username = (EditText) findViewById(R.id.username_up);
         desc = (EditText) findViewById(R.id.desc_up);
         img_preview = (ImageView) findViewById(R.id.image_preview);
 
@@ -99,7 +97,7 @@ public class upload extends AppCompatActivity {
 
             ArrayList<String> comments = new ArrayList<>();
             final Map<String, Object> user_details = new HashMap<>();
-            user_details.put(sname, username.getText().toString());
+            user_details.put(sname, SharedPref.getString(getApplicationContext(),"sp_Username"));
             user_details.put(sdesc, desc.getText().toString());
             user_details.put(slike,0);
             user_details.put(staken,false);

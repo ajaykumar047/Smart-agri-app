@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".login_options">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/farmining_button"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                app:srcCompat="@drawable/ama" />
+
+            <TextView
+                android:id="@+id/text_shop_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Farming"
+                android:textAlignment="gravity"
+                android:textSize="28dp"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/gardening_btn"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                app:srcCompat="@drawable/flip" />
+
+            <TextView
+                android:id="@+id/text_shop_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Gardening"
+                android:textAlignment="gravity"
+                android:textSize="28dp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

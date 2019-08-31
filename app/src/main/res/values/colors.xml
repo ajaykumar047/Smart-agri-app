@@ -7,5 +7,6 @@
     <color name="shaded_grey">#C0B3B3</color>
     <color name="grey">#9B9B9B</color>
     <color name="black">#000000</color>
-    <color name="dark_blue">#00B41B</color>
+    <color name="dark_blue">#4F14CF</color>
+    <color name="green">#00B41B</color>
 </resources>

@@ -34,6 +34,7 @@ public class home extends AppCompatActivity
     Intent Insta_intent;
     Intent shop_intent;
     Intent gps_intent;
+    Intent plant_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +58,13 @@ public class home extends AppCompatActivity
         shop.setOnClickListener(shop_redirect);
         insta.setOnClickListener(insta_redirect);
         gps.setOnClickListener(gps_redirect);
+        plants.setOnClickListener(plant_redirect);
 
         gps_intent = new Intent(getApplicationContext(),map.class);
         Insta_intent = new Intent(getApplicationContext(), MainActivity.class);
         shop_intent = new Intent(getApplicationContext(), shop.class);
+        plant_intent = new Intent(getApplicationContext(),Plants.class);
+
     }
 
     @Override
@@ -140,6 +144,13 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(gps_intent);
+
+        }
+    };
+    View.OnClickListener plant_redirect = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(plant_intent);
 
         }
     };
