@@ -5,13 +5,25 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Splash_Screen">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Welcome"
+        android:layout_marginTop="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THINK AGRI"
         android:textSize="50dp"
-        android:textAlignment="gravity"
-        android:gravity="center_vertical|center_horizontal"/>
+        android:textStyle="bold|italic"
+        android:textColor="@color/dark_blue"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:srcCompat="@drawable/orchids"
+        />
 
 </LinearLayout>
