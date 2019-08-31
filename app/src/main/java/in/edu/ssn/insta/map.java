@@ -78,26 +78,96 @@ public class map extends AppCompatActivity {
             month = formatter.format(date);
             if (loc.equals("North")) {
                 switch (month) {
-                    case "01":
-                    case "02":
-                    case "03":
-                    case "04":
-                    case "05":
-                    case "06":
+                    case "01":break;
+                    case "02":break;
+                    case "03":break;
+                    case "04":break;
+                    case "05":break;
+                    case "06":break;
                     case "07":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("guards" ,R.drawable.guard));
+                        arr_list.add(new plant_sugg_details("cucumber" ,R.drawable.cucumber));
+                        arr_list.add(new plant_sugg_details("okra" ,R.drawable.okra));
+                        arr_list.add(new plant_sugg_details("tomato" ,R.drawable.tomato));
+                        break;
+
                     case "08":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("carrot" ,R.drawable.carrot));
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("radish" ,R.drawable.radish));
+                        arr_list.add(new plant_sugg_details("tomato" ,R.drawable.tomato));
+                        break;
                     case "09":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("cabbage" ,R.drawable.cabbage));
+                        arr_list.add(new plant_sugg_details("carrot" ,R.drawable.carrot));
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("radish" ,R.drawable.radish));
+                        arr_list.add(new plant_sugg_details("tomato" ,R.drawable.tomato));
+                        arr_list.add(new plant_sugg_details("lettuce" ,R.drawable.lettuce));
+                        break;
                     case "10":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("brinjal" ,R.drawable.brinjal));
+                        arr_list.add(new plant_sugg_details("cabbage" ,R.drawable.cabbage));
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("lettuce" ,R.drawable.lettuce));
+                        arr_list.add(new plant_sugg_details("radish" ,R.drawable.radish));
+                        arr_list.add(new plant_sugg_details("spinach" ,R.drawable.spinach));
+                        arr_list.add(new plant_sugg_details("turnip" ,R.drawable.turnip));
+                        break;
                     case "11":
                     case "12":
 
                 }
             } else if (loc.equals("South")) {
                 switch (month) {
+                    case "01":break;
+                    case "02":break;
+                    case "03":break;
+                    case "04":break;
+                    case "05":break;
+                    case "06":break;
+                    case "07":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("guards" ,R.drawable.guard));
+                        arr_list.add(new plant_sugg_details("solanaeceae" ,R.drawable.solanaeae));
+                        break;
+
                     case "08":
-                        Log.i(TAG, "south onCreate:sdfaew ");
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("carrot" ,R.drawable.carrot));
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("green beans" ,R.drawable.greenbeans));
+                        break;
+
+                    case "09":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("cucumber" ,R.drawable.cucumber));
+                        arr_list.add(new plant_sugg_details("onion" ,R.drawable.onion));
+                        arr_list.add(new plant_sugg_details("spinach" ,R.drawable.spinach));
+                        break;
+
+                    case "10":
+                        Log.i(TAG, "onCreate: "+month);
+                        arr_list.add(new plant_sugg_details("brinjal" ,R.drawable.brinjal));
+                        arr_list.add(new plant_sugg_details("cabbage" ,R.drawable.cabbage));
+                        arr_list.add(new plant_sugg_details("cauliflower" ,R.drawable.cauliflower));
+                        arr_list.add(new plant_sugg_details("lettuce" ,R.drawable.lettuce));
+                        arr_list.add(new plant_sugg_details("radish" ,R.drawable.radish));
+                        arr_list.add(new plant_sugg_details("spinach" ,R.drawable.spinach));
+                        arr_list.add(new plant_sugg_details("turnip" ,R.drawable.turnip));
+                        break;
+
+                    case "11":
+                    case "12":
                 }
             }
+            arr_adp = new plant_sugg_adapter(getApplicationContext(), arr_list);
+            plant_sugg_lv.setAdapter(arr_adp);
         }
     }
 }

@@ -2,24 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/scheme_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18dp"
+        android:textAlignment="gravity"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_margin="30dp"
         android:textColor="@color/black"
         android:paddingBottom="15dp"/>
     <TextView
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:id="@+id/scheme_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15dp"/>
     <Button
         android:id="@+id/scheme_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:text="Click Here"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
         android:layout_gravity="center_horizontal|center_vertical"
         />
+    </LinearLayout>
 
 </LinearLayout>

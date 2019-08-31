@@ -4,18 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_back"
     tools:context=".login_options">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal">
 
-        <LinearLayout
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            app:srcCompat="@drawable/leaves"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="100dp"/>
+
+        <LinearLayout
+
+            android:background="@drawable/rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="50dp"
+
             android:orientation="vertical"
             android:padding="20dp">
 
@@ -24,24 +32,27 @@
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_vertical|center_horizontal"
-                app:srcCompat="@drawable/ama" />
+                app:srcCompat="@drawable/orchids" />
 
             <TextView
                 android:id="@+id/text_shop_1"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Farming"
+                android:text="Farm"
                 android:textAlignment="gravity"
-                android:textSize="28dp"
+                android:textSize="16dp"
+                android:textColor="@color/dark_grey"
 
                 />
         </LinearLayout>
 
         <LinearLayout
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/rectangle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical"
             android:padding="20dp"
             >
@@ -51,18 +62,18 @@
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal|center_vertical"
-                app:srcCompat="@drawable/flip" />
+                app:srcCompat="@drawable/leaf" />
 
             <TextView
+                android:layout_marginTop="20dp"
                 android:id="@+id/text_shop_2"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="Gardening"
+                android:text="Garden"
                 android:textAlignment="gravity"
-                android:textSize="28dp"
-
+                android:textSize="16dp"
+                android:textColor="@color/dark_grey"
                 />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>

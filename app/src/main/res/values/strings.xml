@@ -6,7 +6,7 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="info">info</string>
+    <string name="info">About Team</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -14,10 +14,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="title_activity_home">home</string>
+    <string name="title_activity_home">Think Agri</string>
     <string name="shop">Shop</string>
-    <string name="Insta">Insta</string>
-    <string name="plants">Plants</string>
+    <string name="Insta">Arena</string>
+    <string name="plants">How To</string>
 
     <string name="google_auth_code">858051259543-h4st1lc1hng95dv5hifv7q8oa60jvt15.apps.googleusercontent.com</string>
     <string name="title_activity_map">map</string>
@@ -34,5 +34,6 @@ The Centre has also asked state governments to use "the existing land ownership 
     <string name="sch2_l">https://pmksy.gov.in/</string>
     <string name="sch3_l">https://pgsindia-ncof.gov.in/pkvy/index.aspx</string>
     <string name="sch4_l">https://pib.gov.in/newsite/mbErel.aspx?relid=96201</string>
+    <string name="Developers">Ezhil Prasanth\nHarini k\nHarish Kumar P</string>
 
 </resources>
