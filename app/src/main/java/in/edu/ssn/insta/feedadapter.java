@@ -31,6 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class feedadapter extends ArrayAdapter<post_details> {
+    private static final String TAG ="app_test" ;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference postcolref = db.collection("posts");
     int likeflag = 0;
@@ -55,12 +56,14 @@ public class feedadapter extends ArrayAdapter<post_details> {
         TextView comment = convertView.findViewById(R.id.comment_view);
 
 
-
         username.setText(object.getUsername());
         username_blw.setText(object.getUsername());
         desc.setText(object.getDesc());
         Picasso.get().load(object.getUser_img()).into(user_img);
         Picasso.get().load(object.getPost_img()).into(post_img);
+        Map<String, Object> likes_details = new HashMap<>();
+        likes_details.put("taken",true);
+        postcolref.document(object.getDocument_id()).set(likes_details, SetOptions.merge());
 
         like.setOnClickListener(new View.OnClickListener() {
             @Override

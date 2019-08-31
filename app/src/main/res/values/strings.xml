@@ -20,4 +20,5 @@
     <string name="plants">Plants</string>
 
     <string name="google_auth_code">858051259543-h4st1lc1hng95dv5hifv7q8oa60jvt15.apps.googleusercontent.com</string>
+    <string name="title_activity_map">map</string>
 </resources>

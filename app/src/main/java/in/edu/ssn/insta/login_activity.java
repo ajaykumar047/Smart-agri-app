@@ -91,6 +91,7 @@ public class login_activity extends AppCompatActivity {
                 SharedPref.putString(getApplicationContext(), "sp_Username", acct.getDisplayName());
                 SharedPref.putString(getApplicationContext(), "image_url", acct.getPhotoUrl().toString());
                 SharedPref.putString(getApplicationContext(), "email", acct.getEmail());
+                Log.i(TAG, "onActivityResult: "+SharedPref.getString(getApplicationContext(),"image_url"));
 
 
                 AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -102,6 +103,8 @@ public class login_activity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(getApplicationContext(),home.class);
+                            startActivity(intent);
                         } else {
                             Log.d(TAG, "signInWithCredential:failure  "+task.getException().toString());
                         }
@@ -116,4 +119,5 @@ public class login_activity extends AppCompatActivity {
             }
         }
     }
+
 }

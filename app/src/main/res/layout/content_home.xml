@@ -26,6 +26,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
             <ImageView
+                android:id="@+id/GPS_home_btn"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/user"

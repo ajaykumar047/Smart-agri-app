@@ -1,54 +1,36 @@
 package in.edu.ssn.insta;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class shop extends AppCompatActivity {
-    ImageView flipkart;
-    ImageView amazon;
-    ImageView plants;
-    ImageView youtube;
+
+    ArrayList<shop_item_details> arr_list = new ArrayList<>();
+    shopadapter arr_adp;
+    ListView shop_listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
-        flipkart=(ImageView)findViewById(R.id.acm_1);
-        amazon=(ImageView)findViewById(R.id.acm_2);
-        plants = (ImageView)findViewById(R.id.acm_3);
-        youtube = (ImageView)findViewById(R.id.acm4);
+        shop_listView = (ListView)findViewById(R.id.shop_item_list);
 
-        flipkart.setOnClickListener(f_redirect);
-        amazon.setOnClickListener(A_redirect);
-        plants.setOnClickListener(w_redirect);
-        youtube.setOnClickListener(y_redirect);
-
+        arr_list.add(new shop_item_details("Magnesium" , "Cow-Manure","epsom+salt+for+plants","cow+manure ",R.drawable.magnesium,R.drawable.cow_manure));
+        arr_adp = new shopadapter(getApplicationContext(), arr_list);
+        shop_listView.setAdapter(arr_adp);
 
     }
 
-    View.OnClickListener f_redirect=new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Uri uri = Uri.parse("https://www.flipkart.com/search?q="+"iphones");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
 
-        }
-    };
-    View.OnClickListener A_redirect=new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Uri uri = Uri.parse("https://www.amazon.in/s?k="+"socks");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(intent);
-
-        }
-    };
     View.OnClickListener w_redirect=new View.OnClickListener() {
         @Override
         public void onClick(View view) {

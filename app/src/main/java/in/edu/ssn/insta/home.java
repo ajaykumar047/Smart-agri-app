@@ -29,9 +29,11 @@ public class home extends AppCompatActivity
     ImageView shop;
     ImageView insta;
     ImageView plants;
+    ImageView gps;
 
     Intent Insta_intent;
     Intent shop_intent;
+    Intent gps_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +52,13 @@ public class home extends AppCompatActivity
         shop = (ImageView) findViewById(R.id.shop_home_btn);
         insta = (ImageView) findViewById(R.id.insta_home_btn);
         plants = (ImageView) findViewById(R.id.plantg_home_btn);
+        gps = (ImageView) findViewById(R.id.GPS_home_btn);
 
         shop.setOnClickListener(shop_redirect);
         insta.setOnClickListener(insta_redirect);
+        gps.setOnClickListener(gps_redirect);
 
+        gps_intent = new Intent(getApplicationContext(),map.class);
         Insta_intent = new Intent(getApplicationContext(), MainActivity.class);
         shop_intent = new Intent(getApplicationContext(), shop.class);
     }
@@ -64,7 +69,12 @@ public class home extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            Intent startMain = new Intent(Intent.ACTION_MAIN);
+            startMain.addCategory(Intent.CATEGORY_HOME);
+            startMain.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+            startActivity(startMain);
+            finish();
+
         }
     }
 
@@ -126,6 +136,15 @@ public class home extends AppCompatActivity
 
         }
     };
+    View.OnClickListener gps_redirect = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(gps_intent);
+
+        }
+    };
+
+
 
 
 }

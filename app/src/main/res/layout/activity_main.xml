@@ -14,8 +14,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/camera"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userpic"
             android:background="@drawable/circle"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="15dp"
@@ -38,13 +38,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/upper_lay"
         android:src="@drawable/line"/>
-    <ListView
-        android:id="@+id/post_listv"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/middle">
+        android:layout_below="@id/middle"
+        >
+        <ListView
+            android:id="@+id/post_listv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/middle">
 
-    </ListView>
+        </ListView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 
 </RelativeLayout>

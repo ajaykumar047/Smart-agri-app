@@ -52,6 +52,7 @@ public class upload extends AppCompatActivity {
     final static String sname = "name";
     final static String sdesc = "desc";
     final static String slike = "like";
+    final static String staken = "taken";
     final static String sdocid = "docid";
     final static String scomments = "comment";
     final static String spost_img = "post_img";
@@ -101,6 +102,7 @@ public class upload extends AppCompatActivity {
             user_details.put(sname, username.getText().toString());
             user_details.put(sdesc, desc.getText().toString());
             user_details.put(slike,0);
+            user_details.put(staken,false);
             user_details.put(scomments,comments);
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
