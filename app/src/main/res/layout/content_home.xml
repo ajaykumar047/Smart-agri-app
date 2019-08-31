@@ -9,12 +9,17 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".home"
     tools:showIn="@layout/app_bar_home">
+    <ImageView
+        android:id="@+id/display_img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="40dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_weight="1"
+        android:layout_marginBottom="40dp"
         >
         <LinearLayout
             android:background="@drawable/rectangle_blue"
@@ -86,7 +91,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <LinearLayout

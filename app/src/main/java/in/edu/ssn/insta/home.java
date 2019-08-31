@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.os.Handler;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
@@ -33,11 +34,37 @@ public class home extends AppCompatActivity
     ImageView insta;
     ImageView plants;
     ImageView gps;
+    ImageView display;
+    int flag=0;
 
     Intent Insta_intent;
     Intent shop_intent;
     Intent gps_intent;
     Intent plant_intent;
+    public void change_image(){
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                if(flag==0){
+                    display.setBackgroundResource(R.mipmap.dis1);
+                    flag=2;
+                }
+                else if(flag==2){
+                    display.setBackgroundResource(R.mipmap.dis2);
+                    flag=3;
+                }
+                else if(flag==3){
+                    display.setBackgroundResource(R.mipmap.dis3);
+                    flag=4;
+                }
+                else if(flag==4){
+                    display.setBackgroundResource(R.mipmap.dis4);
+                    flag=0;
+                }
+            }
+        }, 500);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +84,7 @@ public class home extends AppCompatActivity
         insta = (ImageView) findViewById(R.id.insta_home_btn);
         plants = (ImageView) findViewById(R.id.plantg_home_btn);
         gps = (ImageView) findViewById(R.id.GPS_home_btn);
+        display=(ImageView)findViewById(R.id.display_img); 
 
         shop.setOnClickListener(shop_redirect);
         insta.setOnClickListener(insta_redirect);
@@ -67,6 +95,7 @@ public class home extends AppCompatActivity
         Insta_intent = new Intent(getApplicationContext(), MainActivity.class);
         shop_intent = new Intent(getApplicationContext(), shop.class);
         plant_intent = new Intent(getApplicationContext(), Plants.class);
+        change_image();
 
     }
 
@@ -131,13 +160,16 @@ public class home extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             startActivity(gps_intent);
+            change_image();
         } else if (id == R.id.nav_gallery) {
+            change_image();
             startActivity(plant_intent);
         } else if (id == R.id.nav_shop) {
             startActivity(shop_intent);
-
+            change_image();
         } else if (id == R.id.nav_insta) {
             startActivity(Insta_intent);
+            change_image();
         }
         else if (id == R.id.nav_logout) {
             SharedPref.putString(getApplicationContext(), "sp_Username", null);
@@ -162,6 +194,7 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(Insta_intent);
+            change_image();
 
         }
     };
@@ -169,6 +202,7 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(shop_intent);
+            change_image();
 
         }
     };
@@ -176,6 +210,7 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(gps_intent);
+            change_image();
 
         }
     };
@@ -183,6 +218,7 @@ public class home extends AppCompatActivity
         @Override
         public void onClick(View view) {
             startActivity(plant_intent);
+            change_image();
 
         }
     };
