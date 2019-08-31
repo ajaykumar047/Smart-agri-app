@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/light_grey"
     tools:context=".Plants">
     <TextView
         android:layout_marginLeft="45dp"
@@ -21,6 +22,7 @@
         android:gravity="center_vertical|center_horizontal"
         />
     <ListView
+        android:divider="@color/light_grey"
         android:id="@+id/plant_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

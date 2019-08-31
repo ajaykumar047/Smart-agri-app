@@ -1,8 +1,11 @@
 package in.edu.ssn.insta;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,7 +25,7 @@ public class login_options extends AppCompatActivity {
         farming.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(login_options.this,Extensive_farming.class);
+                Intent intent = new Intent(login_options.this,language.class);
                 startActivity(intent);
 
             }
@@ -42,5 +45,15 @@ public class login_options extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+        startActivity(startMain);
+        finishAffinity();
+        finish();
     }
 }

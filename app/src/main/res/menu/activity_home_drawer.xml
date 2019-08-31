@@ -20,6 +20,10 @@
             android:id="@+id/nav_insta"
             android:icon="@drawable/insta_linear"
             android:title="@string/Insta" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/logout" />
     </group>
 
 

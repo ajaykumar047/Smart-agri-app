@@ -6,15 +6,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".commentsubmit">
-    <EditText
-        android:id="@+id/comment_submit_text"
+    <TextView
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:text="Post a comment"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
+        android:gravity="center_vertical|center_horizontal"
+        />
+    <EditText
+        android:background="@drawable/rectangle_white"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/comment_submit_text"
         android:hint="Enter ur comments"/>
     <Button
+        android:background="@drawable/rectangle_blue"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
         android:id="@+id/submit_comment"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="submit"
         android:layout_gravity="center_horizontal|center_vertical"/>
 

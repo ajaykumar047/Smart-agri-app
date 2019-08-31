@@ -1,14 +1,14 @@
 package in.edu.ssn.insta;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 
-public class Extensive_farming extends AppCompatActivity {
+public class Extensive_farming_tamil extends AppCompatActivity {
 
     ArrayList<scheme_details> arr_list = new ArrayList<>();
     schemesadapter arr_adp;
@@ -22,10 +22,10 @@ public class Extensive_farming extends AppCompatActivity {
         scheme_listView = (ListView) findViewById(R.id.Ext_farm_lv);
 
 
-        arr_list.add(new scheme_details(R.string.sch1, R.string.sch1_d, "http://www.pmkisan.gov.in/"));
-        arr_list.add(new scheme_details(R.string.sch2, R.string.sch2_d,"https://pmksy.gov.in/"));
-        arr_list.add(new scheme_details(R.string.sch3, R.string.sch3_d,"https://pgsindia-ncof.gov.in/pkvy/index.aspx" ));
-        arr_list.add(new scheme_details(R.string.sch4, R.string.sch4_d,"https://pib.gov.in/newsite/mbErel.aspx?relid=96201"));
+        arr_list.add(new scheme_details(R.string.sch_t1, R.string.sch_t1_d, "http://www.pmkisan.gov.in/"));
+        arr_list.add(new scheme_details(R.string.sch_t2, R.string.sch_t2_d,"https://pmksy.gov.in/"));
+        arr_list.add(new scheme_details(R.string.sch_t3, R.string.sch_t3_d,"https://pgsindia-ncof.gov.in/pkvy/index.aspx" ));
+        arr_list.add(new scheme_details(R.string.sch_t4, R.string.sch_t4_d,"https://pib.gov.in/newsite/mbErel.aspx?relid=96201"));
         arr_adp = new schemesadapter(getApplicationContext(), arr_list);
         scheme_listView.setAdapter(arr_adp);
     }

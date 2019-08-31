@@ -22,12 +22,20 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arena"
+            android:layout_marginLeft="30dp"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:textColor="@color/dark_blue"/>
 
         <ImageView
             android:id="@+id/upload"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginLeft="240dp"
+            android:layout_marginLeft="130dp"
             android:layout_gravity="center_horizontal|center_vertical"
             app:srcCompat="@drawable/camera"
             android:layout_marginRight="15dp"/>

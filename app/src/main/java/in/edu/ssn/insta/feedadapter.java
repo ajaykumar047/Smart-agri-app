@@ -35,6 +35,7 @@ public class feedadapter extends ArrayAdapter<post_details> {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference postcolref = db.collection("posts");
     int likeflag = 0;
+    int like_f = 0;
 
     public feedadapter(Context context, ArrayList<post_details> objects) {
         super(context, 0, objects);
@@ -68,10 +69,18 @@ public class feedadapter extends ArrayAdapter<post_details> {
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (like_f == 0) {
+                    like.setImageResource(R.drawable.heart);
+                    like_f = 1;
+                } else {
+                    like.setImageResource(R.drawable.like);
+                    like_f = 0;
+                }
                 postcolref.document(object.getDocument_id()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         Long likes = (Long) task.getResult().get("like");
+
                         if (likeflag == 0) {
                             like.setImageResource(R.drawable.heart);
                             likes++;

@@ -130,7 +130,7 @@ public class upload extends AppCompatActivity {
                                                 Map<String, Object> user_img_details = new HashMap<>();
                                                 user_img_details.put(sdocid,document_id);
                                                 user_img_details.put(spost_img, download_url);
-                                                user_img_details.put(suser_img, "https://firebasestorage.googleapis.com/v0/b/insta-fa46a.appspot.com/o/user.png?alt=media&token=6d3a17e7-aedb-4ef0-9c49-379071ecef98");
+                                                user_img_details.put(suser_img, SharedPref.getString(getApplicationContext(),"sp_image_url"));
                                                 postcolref.document(document_id).set(user_img_details, SetOptions.merge());
                                                 Toast.makeText(upload.this, "Upload success", Toast.LENGTH_SHORT).show();
                                             }

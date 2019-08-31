@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Picasso.get().load(SharedPref.getString(getApplicationContext(), "image_url")).into(userpic);
+        Picasso.get().load(SharedPref.getString(getApplicationContext(), "sp_image_url")).into(userpic);
 
         upload.setOnClickListener(new View.OnClickListener() {
             @Override

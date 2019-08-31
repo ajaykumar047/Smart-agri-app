@@ -4,11 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_grey"
     android:orientation="vertical"
     tools:context=".view_comments">
+    <TextView
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Comments"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
+        android:gravity="center_vertical|center_horizontal"
+        />
     <ListView
+        android:divider="@color/light_grey"
         android:id="@+id/comment_LV"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

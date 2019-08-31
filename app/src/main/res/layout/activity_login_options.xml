@@ -15,6 +15,20 @@
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="100dp"/>
+    <TextView
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Choose A Category"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+
+        android:textColor="@color/white"
+        android:background="@drawable/rectangle_blue"
+        android:gravity="center_vertical|center_horizontal"
+        />
 
         <LinearLayout
 
@@ -22,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
 
             android:orientation="vertical"
             android:padding="20dp">

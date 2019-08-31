@@ -63,10 +63,10 @@ public class home extends AppCompatActivity
         gps.setOnClickListener(gps_redirect);
         plants.setOnClickListener(plant_redirect);
 
-        gps_intent = new Intent(getApplicationContext(),map.class);
+        gps_intent = new Intent(getApplicationContext(), map.class);
         Insta_intent = new Intent(getApplicationContext(), MainActivity.class);
         shop_intent = new Intent(getApplicationContext(), shop.class);
-        plant_intent = new Intent(getApplicationContext(),Plants.class);
+        plant_intent = new Intent(getApplicationContext(), Plants.class);
 
     }
 
@@ -80,6 +80,7 @@ public class home extends AppCompatActivity
             startMain.addCategory(Intent.CATEGORY_HOME);
             startMain.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
             startActivity(startMain);
+            finishAffinity();
             finish();
 
         }
@@ -129,14 +130,27 @@ public class home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            startActivity(gps_intent);
         } else if (id == R.id.nav_gallery) {
-
+            startActivity(plant_intent);
         } else if (id == R.id.nav_shop) {
             startActivity(shop_intent);
 
         } else if (id == R.id.nav_insta) {
             startActivity(Insta_intent);
+        }
+        else if (id == R.id.nav_logout) {
+            SharedPref.putString(getApplicationContext(), "sp_Username", null);
+            SharedPref.putString(getApplicationContext(), "sp_image_url", null);
+            SharedPref.putString(getApplicationContext(), "sp_email", null);
+            SharedPref.putBoolean(getApplicationContext(), "sp_loggedin", false);
+
+            Intent startMain = new Intent(Intent.ACTION_MAIN);
+            startMain.addCategory(Intent.CATEGORY_HOME);
+            startMain.setFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+            startActivity(startMain);
+            finishAffinity();
+            finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -172,8 +186,6 @@ public class home extends AppCompatActivity
 
         }
     };
-
-
 
 
 }
