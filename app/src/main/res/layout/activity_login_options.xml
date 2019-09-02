@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/rectangle_back"
-    tools:context=".login_options">
+    tools:context=".Activities.login_options">
 
         <ImageView
             android:layout_width="wrap_content"

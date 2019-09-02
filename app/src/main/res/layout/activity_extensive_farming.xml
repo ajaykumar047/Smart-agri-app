@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Extensive_farming">
+    tools:context=".Activities.Extensive_farming">
     <ListView
         android:id="@+id/Ext_farm_lv"
         android:layout_width="match_parent"

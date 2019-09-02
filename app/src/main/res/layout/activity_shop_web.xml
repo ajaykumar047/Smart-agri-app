@@ -5,32 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.upload">
+    android:background="@color/white"
+    tools:context=".Activities.web">
 
     <TextView
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="Event Details"
         android:textAlignment="gravity"
         android:textStyle="bold"
-
+        android:id="@+id/title_textv"
         android:textColor="@color/white"
         android:background="@drawable/rectangle_blue"
         android:gravity="center_vertical|center_horizontal"
         />
-    <TextView
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        android:background="@drawable/rectangle_white"
-        android:id="@+id/event_desc_tv"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
+    <RelativeLayout
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_blue"
+        >
+        <WebView
+            android:id="@+id/shop_web"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle_blue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </RelativeLayout>
+
 
 
 </LinearLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/light_grey"
     android:orientation="vertical"
-    tools:context=".view_comments">
+    tools:context=".Activities.view_comments">
     <TextView
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"

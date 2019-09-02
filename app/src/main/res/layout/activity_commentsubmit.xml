@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".commentsubmit">
+    tools:context=".Activities.commentsubmit">
     <TextView
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"

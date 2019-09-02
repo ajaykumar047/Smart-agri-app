@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rectangle_back"
     android:orientation="vertical"
-    tools:context=".language">
+    tools:context=".Activities.language">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
