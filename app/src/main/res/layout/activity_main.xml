@@ -46,22 +46,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/upper_lay"
         android:src="@drawable/line"/>
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swiperefresh"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/middle"
-        >
-        <ListView
+
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/post_listv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:layout_below="@id/middle">
 
-        </ListView>
+        </androidx.recyclerview.widget.RecyclerView>
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 

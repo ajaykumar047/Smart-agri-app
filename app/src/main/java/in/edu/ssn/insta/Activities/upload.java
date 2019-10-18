@@ -95,6 +95,7 @@ public class upload extends AppCompatActivity {
         @Override
         public void onClick(View view) {
 
+            uploadbtn.setEnabled(false);
             ArrayList<String> comments = new ArrayList<>();
             final Map<String, Object> user_details = new HashMap<>();
             user_details.put(sname, SharedPref.getString(getApplicationContext(),"sp_Username"));
@@ -133,7 +134,7 @@ public class upload extends AppCompatActivity {
                                                 user_img_details.put(spost_img, download_url);
                                                 user_img_details.put(suser_img, SharedPref.getString(getApplicationContext(),"sp_image_url"));
                                                 postcolref.document(document_id).set(user_img_details, SetOptions.merge());
-                                                Toast.makeText(upload.this, "Upload success", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(upload.this, "Upload successful", Toast.LENGTH_SHORT).show();
                                                 onBackPressed();
                                             }
                                         });
@@ -146,8 +147,8 @@ public class upload extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(upload.this, "Upload failure", Toast.LENGTH_SHORT).show();
-
+                            Toast.makeText(upload.this, "Upload failure...Pls try Again", Toast.LENGTH_SHORT).show();
+                            onBackPressed();
                         }
                     });
         }
